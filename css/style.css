@@ -53,20 +53,7 @@ animation-duration: 5s;}
 /* Having issues centering content */
 
 /* Need to add keyframes styling here (i.e. step 11) */
-@media screen and (min-width: 1000px) {
-    body{
-        background-image: none;
-    }
-    .nav_links{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-end;
-    }
 
-
-}
 @media screen and (min-width: 850px) { 
  header{
 flex-direction: row;
@@ -85,6 +72,38 @@ align-self: flex-start;
     flex-basis: 250px;
     flex-direction: row;
  }
+}
+@media screen and (min-width: 1000px) {
+    body{
+        background-image: none;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-items: space-between;
+        align-items: flex-end;}
+        
+
+    header{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;}
+    .pricing{
+        display: flex;
+        align-items: flex-end;
+    }
+    .gallery, #gallery{
+        display: none;
+    }
+    .card{
+        border: solid 2px #45Addd;
+        flex-basis: 250px;
+    }
+    
+
+
 }
 
 @media screen and (prefers-reduced-motion: reduce){
