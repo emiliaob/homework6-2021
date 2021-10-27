@@ -33,7 +33,7 @@ header{
    
     margin: 10px;
     width: 300px;
-    border: solid 10px #50c7c7;
+    border: solid 10px #50c7c7; 
 }
 .gallery{
     display: flex;
@@ -55,17 +55,21 @@ animation-duration: 5s;}
 /* Need to add keyframes styling here (i.e. step 11) */
 
 @media screen and (min-width: 850px) { 
- header{
-flex-direction: row;
-justify-content: space-between;
-position: sticky;
-align-self: flex-start;
- }
+ /* header :first-child{
+    flex-direction: row;
+    position: fixed;
+    align-self: flex-start;} */
+
+ 
  .nav_links{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-self: flex-end;
+    flex-wrap: wrap;
+    align-self: flex-end; 
+    /* this is trying to get them on the same level? */
+ }
+ .card.card_big{
+    /* Selector in here to make them the same on the bottom?? */
  }
  .pricing{
      display: flex;
