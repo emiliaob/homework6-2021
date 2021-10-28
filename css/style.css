@@ -13,7 +13,10 @@ header{
     list-style-type: none;
     
 }
-/* Think that the nav links are correct- the color may be wrong though? (step #6) */
+a:visited{
+    color: blue;
+}
+
 .card header{
     display: flex;
     background-color: #288088;
@@ -84,7 +87,7 @@ animation-duration: 5s;}
 
 
 }
-@media screen and (min-width: 1000px) {
+@media print {
     body{
         background-image: none;
     }
@@ -102,6 +105,7 @@ animation-duration: 5s;}
         align-items: center;}
     .pricing{
         display: flex;
+        flex-wrap: nowrap;
         align-items: flex-end;
     }
     .gallery, #gallery{
