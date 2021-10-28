@@ -73,6 +73,7 @@ animation-duration: 5s;}
      body > header{
         position: sticky;
         top:0px;
+        left: 0px;
      }
 
 
