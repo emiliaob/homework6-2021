@@ -11,6 +11,7 @@ header{
 }
 .nav_links{
     list-style-type: none;
+    
 }
 /* Think that the nav links are correct- the color may be wrong though? (step #6) */
 .card header{
@@ -21,8 +22,11 @@ header{
     border-top-right-radius:7px ;
     border-top-left-radius: 7px;
 }
-/* The em/px here might be incorrect */
+
 .pricing{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -30,7 +34,6 @@ header{
     flex-basis: 450px;
 }
 .gallery img{
-   
     margin: 10px;
     width: 300px;
     border: solid 10px #50c7c7; 
@@ -50,32 +53,36 @@ animation-duration: 5s;}
     opacity: 0;}
     to{width:425px;
     opacity: 1;}}
-/* Having issues centering content */
 
-/* Need to add keyframes styling here (i.e. step 11) */
 
-@media screen and (min-width: 850px) { 
- /* header :first-child{
-    flex-direction: row;
-    position: fixed;
-    align-self: flex-start;} */
 
- 
- .nav_links{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-self: flex-end; 
-    /* this is trying to get them on the same level? */
- }
- .card.card_big{
-    /* Selector in here to make them the same on the bottom?? */
- }
+
+@media screen and (min-width: 850px) 
+{ 
+    header, .nav_links{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+  
+     }
+
+     body > header{
+        position: sticky;
+        top:0px;
+     }
+
+
+
  .pricing{
-     display: flex;
+    display: flex;
     flex-basis: 250px;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
  }
+
+
 }
 @media screen and (min-width: 1000px) {
     body{
@@ -84,11 +91,10 @@ animation-duration: 5s;}
     .nav_links{
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-items: space-between;
+        flex-wrap: nowrap;
+        justify-content: space-around;
         align-items: flex-end;}
-        
-
+   
     header{
         display: flex;
         flex-direction: column; 
@@ -104,6 +110,10 @@ animation-duration: 5s;}
     .card{
         border: solid 2px #45Addd;
         flex-basis: 250px;
+    }
+    nav{
+        width: 100%;
+        justify-content: space-around;
     }
     
 
